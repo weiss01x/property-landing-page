@@ -20,39 +20,43 @@ const ContactSection = () => (
             </h1>
 
             <div className='row justify-content-around align-items-center text-center'>
-                <div className='col-auto'>
+                <div className='col-auto d-flex flex-column align-items-center'>
                     <img
                         src={fb}
                         alt="Company Logo"
                         style={{
                             height: '100px', // Reduce the logo height
-                            width: 'auto',  // Maintain the aspect ratio
+                            width: 'auto',   // Maintain the aspect ratio
                         }}
                     />
+                    <span className='text-white'>Facebook</span> {/* You can change the text if needed */}
                 </div>
 
-                <div className='col-auto'>
+                <div className='col-auto d-flex flex-column align-items-center'>
                     <img
                         src={insta}
                         alt="Company Logo"
                         style={{
                             height: '100px', // Reduce the logo height
-                            width: 'auto',  // Maintain the aspect ratio
+                            width: 'auto',   // Maintain the aspect ratio
                         }}
                     />
+                    <span className='text-white'>Instagram</span> {/* You can change the text if needed */}
                 </div>
 
-                <div className='col-auto'>
+                <div className='col-auto d-flex flex-column align-items-center'>
                     <img
                         src={whatsapp}
                         alt="Company Logo"
                         style={{
                             height: '100px', // Reduce the logo height
-                            width: 'auto',  // Maintain the aspect ratio
+                            width: 'auto',   // Maintain the aspect ratio
                         }}
                     />
+                    <span className='text-white'>+601122334455</span>
                 </div>
             </div>
+
         </div>
     </div>
 );

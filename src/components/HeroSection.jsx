@@ -54,7 +54,7 @@ const HeroSection = () => (
                             width: '200px',
                             borderRadius: '50%',
                             objectFit: 'cover',
-                            border: '3px solid #ddd',
+                            border: '3px solid #f7cc0c',
                         }}
                     />
                 </div>

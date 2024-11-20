@@ -1,5 +1,6 @@
 import React from 'react';
 import { Accordion, Card, Carousel } from 'react-bootstrap';
+import projectBg  from '../assets/projectBg.png'; // Adjust path relative to HeroSection.jsx
 
 const tieredProjects = {
   "Tier 1 ⾛路可以到关卡/RTS": [
@@ -262,7 +263,11 @@ const tieredProjects = {
 
 
 const ProjectShowcase = () => (
-  <div className="project-showcase py-5 bg-white">
+  <div className="project-showcase py-5 bg-white" 
+    style={{ backgroundImage: `url(${projectBg})`, backgroundSize: 'auto', backgroundPosition: 'center',   backgroundRepeat: 'repeat', backgroundAttachment: 'fixed'
+  }}
+
+  >
     <div className="container">
       <h2 className="mb-4 text-center">Current Projects 现有的项目</h2>
       <Accordion defaultActiveKey="0">
