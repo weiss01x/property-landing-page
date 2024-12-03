@@ -16,12 +16,15 @@ const OurTeam = () => (
       <Carousel>
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block"
             src={team1}
             alt="Team 1"
             style={{
               height: '500px', // Consistent height
-              objectFit: 'cover', // Ensures proper image scaling without stretching
+              width: '500px', // Consistent height
+              objectFit: 'contain', // Ensures proper image scaling without stretching
+              objectPosition: 'center', // Centers the cropped image
+              margin: '0 auto', // Centers the image horizontally
             }}
           />
           <Carousel.Caption>
@@ -35,8 +38,11 @@ const OurTeam = () => (
             src={team2}
             alt="Team 2"
             style={{
-              height: '500px',
-              objectFit: 'cover',
+              height: '500px', // Consistent height
+              width: '500px', // Consistent height
+              objectFit: 'contain', // Ensures proper image scaling without stretching
+              objectPosition: 'center', // Centers the cropped image
+              margin: '0 auto', // Centers the image horizontally
             }}
           />
           <Carousel.Caption>
@@ -50,8 +56,11 @@ const OurTeam = () => (
             src={team3}
             alt="Team 3"
             style={{
-              height: '500px',
-              objectFit: 'cover',
+              height: '500px', // Consistent height
+              width: '500px', // Consistent height
+              objectFit: 'contain', // Ensures proper image scaling without stretching
+              objectPosition: 'center', // Centers the cropped image
+              margin: '0 auto', // Centers the image horizontally
             }}
           />
           <Carousel.Caption>

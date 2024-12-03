@@ -13,8 +13,7 @@ const ContactSection = () => (
             backgroundPosition: 'center',   // Centers the image
             backgroundRepeat: 'no-repeat',  // Prevents the image from tiling
         }}>
-        <div className="container p-5"
-        >
+        <div className="container p-5">
             <h1 className="mb-5 text-center text-white" style={{ fontFamily: '"Roboto", sans-serif' }}>
                 IVAN IN THE HOUSE
             </h1>

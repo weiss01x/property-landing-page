@@ -1,9 +1,9 @@
-import React from 'react';
-import { Accordion, Card, Carousel } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Accordion, Card, Carousel, Button } from 'react-bootstrap';
 import projectBg  from '../assets/projectBg.png'; // Adjust path relative to HeroSection.jsx
 
 const tieredProjects = {
-  "Tier 1 ⾛路可以到关卡/RTS": [
+  "🏆【Tier 1】 ⾛路可以到关卡/RTS": [
     {
       id: 1,
       title: "C@CIQ",
@@ -57,7 +57,7 @@ const tieredProjects = {
       ],
     },
   ],
-  "Tier 2": [
+  "🏆【Tier 2】⼗分钟以内到关卡/RTS": [
     {
       id: 5,
       title: "Paragon Signature@Abdul Samad",
@@ -123,7 +123,7 @@ const tieredProjects = {
       ],
     },
   ],
-  "Tier 3": [
+  "🏆【Tier 3】15 分钟内到关卡/RTS": [
     {
       id: 10,
       title: "Marina Residence@Bayu",
@@ -177,7 +177,7 @@ const tieredProjects = {
       ],
     },
   ],
-  "Tier 4": [
+  "🏆【Tier 4】20 分钟左右到关卡/RTS": [
     {
       id: 14,
       title: "Pinegate@MegahRia",
@@ -217,7 +217,7 @@ const tieredProjects = {
       ],
     },
   ],
-  "T/ 靠近 2nd link": 
+  "🏆靠近【Second Link】系列": 
     [
       {
         id: 17,
@@ -262,58 +262,78 @@ const tieredProjects = {
 };
 
 
-const ProjectShowcase = () => (
-  <div className="project-showcase py-5 bg-white" 
-    style={{ backgroundImage: `url(${projectBg})`, backgroundSize: 'auto', backgroundPosition: 'center',   backgroundRepeat: 'repeat', backgroundAttachment: 'fixed'
-  }}
+const ProjectShowcase = () => {
+  const [activeKey, setActiveKey] = useState(null); // Manage active accordion item state
 
-  >
-    <div className="container">
-      <h2 className="mb-4 text-center">Current Projects 现有的项目</h2>
-      <Accordion defaultActiveKey="0">
-        {Object.entries(tieredProjects).map(([tier, projects], tierIndex) => (
-          <Accordion.Item eventKey={String(tierIndex)} key={tier}>
-            <Accordion.Header>{tier}</Accordion.Header>
-            <Accordion.Body>
-              {projects.map((project) => (
-                <Card className="shadow-sm mb-4" key={project.id}>
-                  <Carousel>
-                    {project.images.map((image, index) => (
-                      <Carousel.Item key={index}>
-                        <img
-                          src={image}
-                          alt={`${project.title} ${index + 1}`}
-                          className="d-block w-100 img-fluid p-3"
-                          style={{
-                            height: '500px', // Adjust as needed
-                            objectFit: 'cover',
-                          }}
-                        />
-                      </Carousel.Item>
-                    ))}
-                  </Carousel>
-                  <Card.Body>
-                    <Card.Title>{project.title}</Card.Title>
-                    <Card.Text>
-                      <strong>Location:</strong> {project.location}
-                    </Card.Text>
-                    <ul style={{ listStyleType: 'none', paddingLeft: '0' }}>
-                      {project.descriptions.map((desc, index) => (
-                        <li key={index} style={{ marginBottom: '10px' }}>
-                          <span style={{ color: 'green', marginRight: '8px' }}>✅</span>
-                          {desc}
-                        </li>
+  const handleAccordionClose = (eventKey) => {
+    setActiveKey(activeKey === eventKey ? null : eventKey); // Toggle between open/close
+  };
+
+  return (
+    <div
+      className="project-showcase py-5 bg-white"
+      style={{
+        backgroundImage: `url(${projectBg})`,
+        backgroundSize: 'cover', // Ensures the image covers the entire area without distortion
+        backgroundPosition: 'center', // Centers the image to ensure it’s aligned properly
+        backgroundRepeat: 'no-repeat', // Prevents the image from repeating
+    }}
+    >
+      <div className="container">
+        <h2 className="mb-4 text-center">Current Projects 现有的项目</h2>
+        <Accordion activeKey={activeKey} onSelect={(key) => setActiveKey(key)}>
+          {Object.entries(tieredProjects).map(([tier, projects], tierIndex) => (
+            <Accordion.Item eventKey={String(tierIndex)} key={tier}>
+              <Accordion.Header>{tier}</Accordion.Header>
+              <Accordion.Body>
+                {projects.map((project) => (
+                  <Card className="shadow-sm mb-4" key={project.id}>
+                    <Carousel>
+                      {project.images.map((image, index) => (
+                        <Carousel.Item key={index}>
+                          <img
+                            src={image}
+                            alt={`${project.title} ${index + 1}`}
+                            className="d-block w-100 img-fluid p-3"
+                            style={{
+                              height: '500px', // Adjust as needed
+                              objectFit: 'contain',
+                            }}
+                          />
+                        </Carousel.Item>
                       ))}
-                    </ul>
-                  </Card.Body>
-                </Card>
-              ))}
-            </Accordion.Body>
-          </Accordion.Item>
-        ))}
-      </Accordion>
+                    </Carousel>
+                    <Card.Body>
+                      <Card.Title>{project.title}</Card.Title>
+                      <Card.Text>
+                        <strong>Location:</strong> {project.location}
+                      </Card.Text>
+                      <ul style={{ listStyleType: 'none', paddingLeft: '0' }}>
+                        {project.descriptions.map((desc, index) => (
+                          <li key={index} style={{ marginBottom: '10px' }}>
+                            <span style={{ color: 'green', marginRight: '8px' }}>✅</span>
+                            {desc}
+                          </li>
+                        ))}
+                      </ul>
+                    </Card.Body>
+                  </Card>
+                ))}
+                <Button
+                      variant="danger"
+                      size="sm"
+                      onClick={() => handleAccordionClose(String(tierIndex))}
+                      style={{ display: 'block', margin: '0 auto' }}
+                    >
+                      Close This Section
+                </Button>
+              </Accordion.Body>
+            </Accordion.Item>
+          ))}
+        </Accordion>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default ProjectShowcase;

@@ -5,7 +5,8 @@ import ProjectShowcase from './components/ProjectShowcase';
 import ContactSection from './components/ContactSection';
 import ServiceSection from './components/ServiceSection';
 import Footer from './components/Footer';
-
+import 'bootstrap-icons/font/bootstrap-icons.css'; // For Bootstrap Icons
+import './App.css'; // Include styles here
 
 function App() {
   return (
@@ -16,6 +17,16 @@ function App() {
       <ServiceSection />
       <ContactSection />
       <Footer />
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/1234567890" // Replace with your WhatsApp number
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp-button"
+      >
+        <i className="bi bi-whatsapp"></i>
+      </a>
     </div>
   );
 }
