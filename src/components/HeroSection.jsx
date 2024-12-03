@@ -28,7 +28,7 @@ const HeroSection = () => (
                         padding: 0, // Remove padding
                     }}
                 >
-                    <video
+                    <video autoPlay loop muted
                         controls
                         style={{
                             width: '100vw', // Ensure the video stretches to full viewport width
