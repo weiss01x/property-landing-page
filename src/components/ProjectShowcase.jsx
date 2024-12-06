@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Accordion, Card, Carousel, Button } from 'react-bootstrap';
 import projectBg  from '../assets/projectBg.png'; // Adjust path relative to HeroSection.jsx
 
@@ -7,7 +7,7 @@ const tieredProjects = {
     {
       id: 1,
       title: "C@CIQ",
-      images: ['/images/apartment1.jpg', '/images/apartment2.jpg', '/images/apartment3.jpg'],
+      images: ['/images/projects/Tier 1/新时代CIQ/1.jpeg', '/images/projects/Tier 1/新时代CIQ/2.jpeg', '/images/projects/Tier 1/新时代CIQ/3.jpeg'],
       location: "CIQ",
       descriptions: [
         '2029 Q2 拿钥匙',
@@ -20,7 +20,7 @@ const tieredProjects = {
     {
       id: 2,
       title: "RNF@CIQ",
-      images: ['/images/apartment1.jpg', '/images/apartment2.jpg', '/images/apartment3.jpg'],
+      images: ['/images/projects/Tier 1/RNF CIQ/1.jpeg', '/images/projects/Tier 1/RNF CIQ/2.jpeg', '/images/projects/Tier 1/RNF CIQ/3.jpeg'],
       location: "CIQ",
       descriptions: [
         'Phase 1/ 2 已经完⼯',
@@ -33,7 +33,7 @@ const tieredProjects = {
     {
       id: 3,
       title: "MajesSc Genrise@CIQ",
-      images: ['/images/apartment1.jpg', '/images/apartment2.jpg', '/images/apartment3.jpg'],
+      images: ['/images/projects/Tier 1/Majestic Genrise/1.jpeg', '/images/projects/Tier 1/Majestic Genrise/2.jpeg', '/images/projects/Tier 1/Majestic Genrise/3.jpeg', '/images/projects/Tier 1/Majestic Genrise/4.jpeg', '/images/projects/Tier 1/Majestic Genrise/5.jpeg'],
       location: "CIQ",
       descriptions: [
         '2028 Q1 拿钥匙（esSmated）',
@@ -46,7 +46,7 @@ const tieredProjects = {
     {
       id: 4,
       title: "Coronade@CIQ",
-      images: ['/images/apartment1.jpg', '/images/apartment2.jpg', '/images/apartment3.jpg'],
+      images: ['/images/projects/Tier 1/Coronade/1.jpeg', '/images/projects/Tier 1/Coronade/2.jpeg', '/images/projects/Tier 1/Coronade/3.jpeg', '/images/projects/Tier 1/Coronade/4.jpeg'],
       location: "CIQ",
       descriptions: [
         'Phase 1 已经 sold out❌',
@@ -61,7 +61,7 @@ const tieredProjects = {
     {
       id: 5,
       title: "Paragon Signature@Abdul Samad",
-      images: ['/images/apartment1.jpg', '/images/apartment2.jpg', '/images/apartment3.jpg'],
+      images: ['/images/projects/Tier 2/Paragon Signature/1.jpeg', '/images/projects/Tier 2/Paragon Signature/2.jpeg', '/images/projects/Tier 2/Paragon Signature/3.jpeg', '/images/projects/Tier 2/Paragon Signature/4.jpeg'],
       location: "Abdul Samad",
       descriptions: [
         '2028 Q4 拿钥匙',
@@ -74,7 +74,7 @@ const tieredProjects = {
     {
       id: 6,
       title: "Paragon Gateway@Suria",
-      images: ['/images/apartment1.jpg', '/images/apartment2.jpg', '/images/apartment3.jpg'],
+      images: ['/images/projects/Tier 2/Paragon Gateway/1.jpeg', '/images/projects/Tier 2/Paragon Gateway/2.jpeg', '/images/projects/Tier 2/Paragon Gateway/3.jpeg', '/images/projects/Tier 2/Paragon Gateway/4.jpeg', '/images/projects/Tier 2/Paragon Gateway/5.jpeg', '/images/projects/Tier 2/Paragon Gateway/6.jpeg', '/images/projects/Tier 2/Paragon Gateway/7.jpeg', '/images/projects/Tier 2/Paragon Gateway/8.jpeg'],
       location: "Suria",
       descriptions: [
         '2027 Q4 拿钥匙',
@@ -87,7 +87,7 @@ const tieredProjects = {
     {
       id: 7,
       title: "MBW Bay@Danga Bay",
-      images: ['/images/apartment1.jpg', '/images/apartment2.jpg', '/images/apartment3.jpg'],
+      images: ['/images/projects/Tier 2/MBW Bay/1.jpeg', '/images/projects/Tier 2/MBW Bay/2.jpeg', '/images/projects/Tier 2/MBW Bay/3.jpeg', '/images/projects/Tier 2/MBW Bay/4.jpeg'],
       location: "Danga Bay",
       descriptions: [
         '2026 Q2 拿钥匙',
@@ -100,7 +100,7 @@ const tieredProjects = {
     {
       id: 8,
       title: "Avenue@MBW City",
-      images: ['/images/apartment1.jpg', '/images/apartment2.jpg', '/images/apartment3.jpg'],
+      images: ['/images/projects/Tier 2/Avenue/1.jpeg', '/images/projects/Tier 2/Avenue/2.jpeg', '/images/projects/Tier 2/Avenue/3.jpeg', '/images/projects/Tier 2/Avenue/4.jpeg', '/images/projects/Tier 2/Avenue/5.jpeg', '/images/projects/Tier 2/Paragon Gateway/6.jpeg'],
       location: "MBW City",
       descriptions: [
         '2027 Q4 拿钥匙',
@@ -112,7 +112,7 @@ const tieredProjects = {
     {
       id: 9,
       title: "Country Garden@Danga Bay",
-      images: ['/images/apartment1.jpg', '/images/apartment2.jpg', '/images/apartment3.jpg'],
+      images: ['/images/projects/Tier 2/Country Garden/1.jpeg', '/images/projects/Tier 2/Country Garden/2.jpeg', '/images/projects/Tier 2/Country Garden/3.jpeg'],
       location: "Danga Bay",
       descriptions: [
         '完工项目',
@@ -127,7 +127,7 @@ const tieredProjects = {
     {
       id: 10,
       title: "Marina Residence@Bayu",
-      images: ['/images/apartment1.jpg', '/images/apartment2.jpg', '/images/apartment3.jpg'],
+      images: ['/images/projects/Tier 3/Marina Residences/1.jpeg', '/images/projects/Tier 3/Marina Residences/2.jpeg', '/images/projects/Tier 3/Marina Residences/3.jpeg', '/images/projects/Tier 3/Marina Residences/4.jpeg', '/images/projects/Tier 3/Marina Residences/5.jpeg'],
       location: "Bayu",
       descriptions: [
         '完工项目',
@@ -140,7 +140,7 @@ const tieredProjects = {
     {
       id: 11,
       title: "Waterway Peaks@Senibong",
-      images: ['/images/apartment1.jpg', '/images/apartment2.jpg', '/images/apartment3.jpg'],
+      images: ['/images/projects/Tier 3/Waterway Peaks/1.jpeg', '/images/projects/Tier 3/Waterway Peaks/2.jpeg', '/images/projects/Tier 3/Waterway Peaks/3.jpeg', '/images/projects/Tier 3/Waterway Peaks/4.jpeg'],
       location: "Senibong",
       descriptions: [
         '2027 Q1 拿钥匙',
@@ -153,7 +153,7 @@ const tieredProjects = {
     {
       id: 12,
       title: "Permas Height@Permas",
-      images: ['/images/apartment1.jpg', '/images/apartment2.jpg', '/images/apartment3.jpg'],
+      images: ['/images/projects/Tier 3/Permas Height/1.jpeg', '/images/projects/Tier 3/Permas Height/2.jpeg', '/images/projects/Tier 3/Permas Height/3.jpeg', '/images/projects/Tier 3/Permas Height/4.jpeg', '/images/projects/Tier 3/Permas Height/5.jpeg', '/images/projects/Tier 3/Permas Height/6.jpeg', '/images/projects/Tier 3/Permas Height/7.jpeg', '/images/projects/Tier 3/Permas Height/8.jpeg'],
       location: "Permas",
       descriptions: [
         '2028 Q4 拿钥匙',
@@ -166,7 +166,7 @@ const tieredProjects = {
     {
       id: 13,
       title: "Parkland@Permas",
-      images: ['/images/apartment1.jpg', '/images/apartment2.jpg', '/images/apartment3.jpg'],
+      images: ['/images/projects/Tier 3/Parkland/1.jpeg', '/images/projects/Tier 3/Parkland/2.jpeg', '/images/projects/Tier 3/Parkland/3.jpeg', '/images/projects/Tier 3/Parkland/4.jpeg', '/images/projects/Tier 3/Parkland/5.jpeg', '/images/projects/Tier 3/Parkland/6.jpeg'],
       location: "Permas",
       descriptions: [
         '2028 Q4 拿钥匙',
@@ -181,7 +181,7 @@ const tieredProjects = {
     {
       id: 14,
       title: "Pinegate@MegahRia",
-      images: ['/images/apartment1.jpg', '/images/apartment2.jpg', '/images/apartment3.jpg'],
+      images: ['/images/projects/Tier 4/Pinegate/1.jpeg', '/images/projects/Tier 4/Pinegate/2.jpeg', '/images/projects/Tier 4/Pinegate/3.jpeg', '/images/projects/Tier 4/Pinegate/4.jpeg'],
       location: "MegahRia",
       descriptions: [
         '2027 Q4 拿钥匙',
@@ -194,7 +194,7 @@ const tieredProjects = {
     {
       id: 15,
       title: "Central Park@Tampoi",
-      images: ['/images/apartment1.jpg', '/images/apartment2.jpg', '/images/apartment3.jpg'],
+      images: ['/images/projects/Tier 4/Central Park/1.jpeg', '/images/projects/Tier 4/Central Park/2.jpeg', '/images/projects/Tier 4/Central Park/3.jpeg', '/images/projects/Tier 4/Central Park/4.jpeg', '/images/projects/Tier 4/Central Park/5.jpeg', '/images/projects/Tier 4/Central Park/6.jpeg'],
       location: "Tampoi",
       descriptions: [
         'Phase 2 可以拿钥匙了',
@@ -206,7 +206,7 @@ const tieredProjects = {
     {
       id: 16,
       title: "Aliva@AusSn",
-      images: ['/images/apartment1.jpg', '/images/apartment2.jpg', '/images/apartment3.jpg'],
+      images: ['/images/projects/Tier 4/Aliva/1.jpeg', '/images/projects/Tier 4/Aliva/2.jpeg', '/images/projects/Tier 4/Aliva/3.jpeg', '/images/projects/Tier 4/Aliva/4.jpeg'],
       location: "AusSn",
       descriptions: [
         '2027 Q1 拿钥匙',
@@ -222,7 +222,7 @@ const tieredProjects = {
       {
         id: 17,
         title: "Iskandar Residence@Medini",
-        images: ['/images/apartment1.jpg', '/images/apartment2.jpg', '/images/apartment3.jpg'],
+        images: ['/images/projects/SecondLink/Iskandar Residence/1.jpeg', '/images/projects/SecondLink/Iskandar Residence/2.jpeg', '/images/projects/SecondLink/Iskandar Residence/3.jpeg', '/images/projects/SecondLink/Iskandar Residence/4.jpeg', '/images/projects/SecondLink/Iskandar Residence/5.jpeg', '/images/projects/SecondLink/Iskandar Residence/6.jpeg'],
         location: "Medini",
         descriptions: [
           '完工项目',
@@ -235,7 +235,7 @@ const tieredProjects = {
       {
         id: 18,
         title: "V Residence@Medini",
-        images: ['/images/apartment1.jpg', '/images/apartment2.jpg', '/images/apartment3.jpg'],
+        images: ['/images/projects/SecondLink/V Residence/1.jpeg', '/images/projects/SecondLink/V Residence/2.jpeg', '/images/projects/SecondLink/V Residence/3.jpeg', '/images/projects/SecondLink/V Residence/4.jpeg', '/images/projects/SecondLink/V Residence/5.jpeg', '/images/projects/SecondLink/V Residence/6.jpeg', '/images/projects/SecondLink/V Residence/7.jpeg', '/images/projects/SecondLink/V Residence/8.jpeg'],
         location: "Medini",
         descriptions: [
           '2028 Q4 拿钥匙',
@@ -248,7 +248,7 @@ const tieredProjects = {
       {
         id: 19,
         title: "Macrolink@Medini",
-        images: ['/images/apartment1.jpg', '/images/apartment2.jpg', '/images/apartment3.jpg'],
+        images: ['/images/projects/SecondLink/Macrolink/1.jpeg', '/images/projects/SecondLink/Macrolink/2.jpeg', '/images/projects/SecondLink/Macrolink/3.jpeg', '/images/projects/SecondLink/Macrolink/4.jpeg', '/images/projects/SecondLink/Macrolink/5.jpeg', '/images/projects/SecondLink/Iskandar Residence/6.jpeg'],
         location: "Medini",
         descriptions: [
           '完工项目',
@@ -264,14 +264,20 @@ const tieredProjects = {
 
 const ProjectShowcase = () => {
   const [activeKey, setActiveKey] = useState(null); // Manage active accordion item state
+  const componentRef = useRef(null); // Reference to the component's container
 
   const handleAccordionClose = (eventKey) => {
     setActiveKey(activeKey === eventKey ? null : eventKey); // Toggle between open/close
+
+    if (componentRef.current) {
+      componentRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   return (
     <div
       className="project-showcase py-5 bg-white"
+      ref={componentRef}
       style={{
         backgroundImage: `url(${projectBg})`,
         backgroundSize: 'cover', // Ensures the image covers the entire area without distortion
