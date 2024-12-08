@@ -1,8 +1,5 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import team1 from '../assets/team1.jpg';
-import team2 from '../assets/team2.jpg';
-import team3 from '../assets/team3.jpg';
 import './styles.css';
 
 const teamData = [
@@ -20,15 +17,15 @@ const teamData = [
   },
   {
     image: '/images/ourTeam/5072f8ab-e3d7-4a80-b667-439d8aae5643.JPG',
-    alt: 'Team 1',
+    alt: 'Team 4',
   },
   {
     image: '/images/ourTeam/bed520ed-60f8-4f3b-9b13-a29805d098dc.JPG',
-    alt: 'Team 1',
+    alt: 'Team 5',
   },
   {
     image: '/images/ourTeam/d676375e-f463-4b48-b4b6-6520a000c7cd.JPG',
-    alt: 'Team 1',
+    alt: 'Team 6',
   },
 ];
 
@@ -43,15 +40,9 @@ const OurTeam = () => (
         {teamData.map((item, index) => (
           <Carousel.Item key={index}>
             <img
-              className="d-block mx-auto"
+              className="team-image img-fluid mx-auto"
               src={item.image}
               alt={item.alt}
-              style={{
-                height: '500px',
-                objectFit: 'contain',
-                objectPosition: 'center',
-                width: 'auto', // Adjust width dynamically to maintain aspect ratio
-              }}
             />
           </Carousel.Item>
         ))}

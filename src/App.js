@@ -15,7 +15,7 @@ function App() {
       <ProjectShowcase />
       <OurTeam />
       <ServiceSection />
-      <ContactSection />
+    {/* <ContactSection /> */}
       <Footer />
 
       {/* Floating WhatsApp Button */}
