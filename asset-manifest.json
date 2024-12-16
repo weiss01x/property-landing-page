@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/ivanproperty/static/css/main.49e78684.css",
-    "main.js": "/ivanproperty/static/js/main.dc446083.js",
-    "static/js/453.bb2344f6.chunk.js": "/ivanproperty/static/js/453.bb2344f6.chunk.js",
-    "static/media/map.jpg": "/ivanproperty/static/media/map.4408c6b4ad77f4008f34.jpg",
-    "static/media/bootstrap-icons.woff?": "/ivanproperty/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
-    "static/media/projectBg.png": "/ivanproperty/static/media/projectBg.715a44c430c741efc2fc.png",
-    "static/media/bootstrap-icons.woff2?": "/ivanproperty/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
-    "static/media/xhslogo.png": "/ivanproperty/static/media/xhslogo.e8eee36a21e78c262903.png",
-    "static/media/instaLogo.png": "/ivanproperty/static/media/instaLogo.e703d03c25158763a169.png",
-    "static/media/gold-bg.jpg": "/ivanproperty/static/media/gold-bg.d208f45638f7af79ecb3.jpg",
-    "static/media/fblogo.png": "/ivanproperty/static/media/fblogo.f930a14d84863fe40ee9.png",
-    "static/media/whatsapplogo.png": "/ivanproperty/static/media/whatsapplogo.e10106c2be77494eea67.png",
-    "index.html": "/ivanproperty/index.html",
-    "main.49e78684.css.map": "/ivanproperty/static/css/main.49e78684.css.map",
-    "main.dc446083.js.map": "/ivanproperty/static/js/main.dc446083.js.map",
-    "453.bb2344f6.chunk.js.map": "/ivanproperty/static/js/453.bb2344f6.chunk.js.map"
+    "main.css": "/property-landing-page/static/css/main.82472466.css",
+    "main.js": "/property-landing-page/static/js/main.ac7051c3.js",
+    "static/js/453.bb2344f6.chunk.js": "/property-landing-page/static/js/453.bb2344f6.chunk.js",
+    "static/media/map.jpg": "/property-landing-page/static/media/map.4408c6b4ad77f4008f34.jpg",
+    "static/media/bootstrap-icons.woff?": "/property-landing-page/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/projectBg.png": "/property-landing-page/static/media/projectBg.715a44c430c741efc2fc.png",
+    "static/media/bootstrap-icons.woff2?": "/property-landing-page/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "static/media/xhslogo.png": "/property-landing-page/static/media/xhslogo.e8eee36a21e78c262903.png",
+    "static/media/instaLogo.png": "/property-landing-page/static/media/instaLogo.e703d03c25158763a169.png",
+    "static/media/gold-bg.jpg": "/property-landing-page/static/media/gold-bg.d208f45638f7af79ecb3.jpg",
+    "static/media/fblogo.png": "/property-landing-page/static/media/fblogo.f930a14d84863fe40ee9.png",
+    "static/media/whatsapplogo.png": "/property-landing-page/static/media/whatsapplogo.e10106c2be77494eea67.png",
+    "index.html": "/property-landing-page/index.html",
+    "main.82472466.css.map": "/property-landing-page/static/css/main.82472466.css.map",
+    "main.ac7051c3.js.map": "/property-landing-page/static/js/main.ac7051c3.js.map",
+    "453.bb2344f6.chunk.js.map": "/property-landing-page/static/js/453.bb2344f6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.49e78684.css",
-    "static/js/main.dc446083.js"
+    "static/css/main.82472466.css",
+    "static/js/main.ac7051c3.js"
   ]
 }
