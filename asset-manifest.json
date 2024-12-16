@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ivanproperty/static/css/main.49e78684.css",
-    "main.js": "/ivanproperty/static/js/main.087fd289.js",
+    "main.js": "/ivanproperty/static/js/main.382d17c3.js",
     "static/js/453.bb2344f6.chunk.js": "/ivanproperty/static/js/453.bb2344f6.chunk.js",
     "static/media/map.jpg": "/ivanproperty/static/media/map.4408c6b4ad77f4008f34.jpg",
     "static/media/bootstrap-icons.woff?": "/ivanproperty/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
@@ -14,11 +14,11 @@
     "static/media/whatsapplogo.png": "/ivanproperty/static/media/whatsapplogo.e10106c2be77494eea67.png",
     "index.html": "/ivanproperty/index.html",
     "main.49e78684.css.map": "/ivanproperty/static/css/main.49e78684.css.map",
-    "main.087fd289.js.map": "/ivanproperty/static/js/main.087fd289.js.map",
+    "main.382d17c3.js.map": "/ivanproperty/static/js/main.382d17c3.js.map",
     "453.bb2344f6.chunk.js.map": "/ivanproperty/static/js/453.bb2344f6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.49e78684.css",
-    "static/js/main.087fd289.js"
+    "static/js/main.382d17c3.js"
   ]
 }
